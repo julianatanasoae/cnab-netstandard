@@ -4,7 +4,7 @@ namespace Cnab.Bundle
 {
     public class Action
     {
-        [JsonProperty("modifies", Required = Required.AllowNull)]
+        [JsonProperty("modifies")]
         public bool Modifies { get; set; }
     }
 }

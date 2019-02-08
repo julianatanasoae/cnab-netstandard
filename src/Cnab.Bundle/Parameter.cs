@@ -24,16 +24,16 @@ namespace Cnab.Bundle
         [JsonProperty("type", Required = Newtonsoft.Json.Required.Always)]
         public string DataType { get; set; }
 
-        [JsonProperty("required", Required = Newtonsoft.Json.Required.AllowNull)]
+        [JsonProperty("required")]
         public bool Required { get; set; }
 
-        [JsonProperty("defaultValue", Required = Newtonsoft.Json.Required.AllowNull)]
+        [JsonProperty("defaultValue")]
         public T DefaultValue { get; set; }
 
-        [JsonProperty("allowedValues", Required = Newtonsoft.Json.Required.AllowNull)]
+        [JsonProperty("allowedValues")]
         public List<T> AllowedValues { get; set; }
 
-        [JsonProperty("metadata", Required = Newtonsoft.Json.Required.AllowNull)]
+        [JsonProperty("metadata")]
         public ParameterMetadata Metadata { get; set; }
 
         [JsonProperty("destination", Required = Newtonsoft.Json.Required.Always)]
@@ -46,16 +46,16 @@ namespace Cnab.Bundle
 
     public class ParameterMetadata
     {
-        [JsonProperty("description", Required = Newtonsoft.Json.Required.AllowNull)]
+        [JsonProperty("description")]
         public string Description { get; set; }
     }
 
     public class StringParameter : Parameter<string>
     {
-        [JsonProperty("minLength", Required = Newtonsoft.Json.Required.AllowNull)]
+        [JsonProperty("minLength")]
         public int MinimumLength { get; set; }
 
-        [JsonProperty("maxLength", Required = Newtonsoft.Json.Required.AllowNull)]
+        [JsonProperty("maxLength")]
         public int MaximumLength { get; set; }
 
         public override ValidationResult IsValid(string value)
@@ -143,10 +143,10 @@ namespace Cnab.Bundle
 
     public class IntParameter : Parameter<int>
     {
-        [JsonProperty("minValue", Required = Newtonsoft.Json.Required.AllowNull)]
+        [JsonProperty("minValue")]
         public int MinimumValue { get; set; }
 
-        [JsonProperty("maxValue", Required = Newtonsoft.Json.Required.AllowNull)]
+        [JsonProperty("maxValue")]
         public int MaximumValue { get; set; }
 
         public override ValidationResult IsValid(int value)

@@ -4,10 +4,10 @@ namespace Cnab.Bundle
 {
     public class Location
     {
-        [JsonProperty("path", Required = Required.Always)]
+        [JsonProperty("path")]
         public string Path { get; set; }
 
-        [JsonProperty("env", Required = Required.Always)]
+        [JsonProperty("env")]
         public string EnvironmentVariable { get; set; }
     }
 }

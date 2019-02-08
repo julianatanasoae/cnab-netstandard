@@ -6,7 +6,7 @@ namespace Cnab.Bundle
 {
     public class Image : BaseImage
     {
-        [JsonProperty("description", Required = Required.AllowNull)]
+        [JsonProperty("description")]
         public string Description { get; set; }
 
         [JsonProperty("refs", Required = Required.Always)]
@@ -21,7 +21,7 @@ namespace Cnab.Bundle
         [JsonProperty("field", Required = Required.Always)]
         public string Field { get; set; }
 
-        [JsonProperty("mediaType", Required = Required.AllowNull)]
+        [JsonProperty("mediaType")]
         public string MediaType { get; set; }
     }
 }

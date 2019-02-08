@@ -13,13 +13,13 @@ namespace Cnab.Bundle
         [JsonProperty("digest", Required = Required.Always)]
         public string Digest { get; set; }
 
-        [JsonProperty("size", Required = Required.AllowNull)]
+        [JsonProperty("size")]
         public ulong Size { get; set; }
 
-        [JsonProperty("platform", Required = Required.AllowNull)]
+        [JsonProperty("platform")]
         public ImagePlatform Platform { get; set; }
 
-        [JsonProperty("mediaType", Required = Required.AllowNull)]
+        [JsonProperty("mediaType")]
         public string MediaType { get; set; }
     }
 

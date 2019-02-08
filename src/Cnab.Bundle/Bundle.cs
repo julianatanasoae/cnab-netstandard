@@ -16,13 +16,13 @@ namespace Cnab.Bundle
         [JsonProperty("version", Required = Required.Always)]
         public string Version { get; set; }
 
-        [JsonProperty("description", Required = Required.AllowNull)]
+        [JsonProperty("description")]
         public string Description { get; set; }
 
-        [JsonProperty("keywords", Required = Required.AllowNull)]
+        [JsonProperty("keywords")]
         public List<string> Keywords { get; set; }
 
-        [JsonProperty("maintainers", Required = Required.AllowNull)]
+        [JsonProperty("maintainers")]
         public List<Maintainer> Maintainers { get; set; }
 
         [JsonProperty("invocationImages", Required = Required.Always)]
@@ -31,13 +31,13 @@ namespace Cnab.Bundle
         [JsonProperty("images", Required = Required.Always)]
         public Dictionary<string, Image> Images { get; set; }
 
-        [JsonProperty("parameters", Required = Required.AllowNull)]
+        [JsonProperty("parameters")]
         public Dictionary<string, IParameterDefinition> Parameters { get; set; }
 
-        [JsonProperty("credentials", Required = Required.AllowNull)]
+        [JsonProperty("credentials")]
         public Dictionary<string, Location> Credentials { get; set; }
 
-        [JsonProperty("actions", Required = Required.AllowNull)]
+        [JsonProperty("actions")]
         public Dictionary<string, Action> Actions { get; set; }
 
         public static async Task<Bundle> LoadUnsignedAsync(string fileName)
